@@ -23,6 +23,11 @@
 ## CONECTANDO-SE À INSTÂNCIA PELA SSH - CHAVE PEM
 1. Abre-se o terminal;
 2. Localiza-se a pasta na qual está a chave;
-3. Para que a chave não possa ser alterada e, sim, só possa ser lida, executamos chmod 400 nomeDoArquivoChave.extensao. No caso, temos chmod 400 ServidorWeb.pem
-Conectar à instância usando a DNS pública: ssh -i “nomeDaChave.extensao” ubuntu@ec2 … ⇒ Sempre pegar no Conectar-se à instância > Cliente SSH!
-No caso de ter se conectado por uma SSH criada no próprio computador, o arquivo a ser enviado é o .pub. Agora, estamos dentro do nosso Linux, podendo usar todos os comandos Linux normalmente.
+3. Para que a chave não possa ser alterada e, sim, apenas lida, execute:
+```shell
+chmod 400 nome_arquivo.extensao.
+```
+4. Conectar-se à instância usando a DNS pública: 
+```shell
+ssh -i nome_arquivo.extensao ubuntu@DNS
+```
